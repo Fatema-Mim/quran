@@ -62,7 +62,7 @@
             </button>
             <button
            onclick="toggle_nav()">
-           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="inline-block self-center w-6 h-6">
+           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="inline-block self-center w-6 h-6 focus:bg-none">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
 
@@ -71,7 +71,7 @@
  
        <!-- Nav menu -->
        <div
-         class="w-full lg:w-auto  lg:flex lg:items-center hidden"
+         class="mt-0 lg:mt-10 w-full lg:w-auto  lg:flex lg:items-center hidden "
          id="navbar"
        >
          <div class="lg:flex-grow  space-x-0 lg:space-x-5 space-y-3 lg:space-y-0 text-center ">
@@ -391,7 +391,7 @@
        
 
        <script>
-            var navbar = document.getElementById("#navbar");
+            var navbar = document.getElementById("navbar");
             var backtotop = document.getElementById("#backtotop");
         
             const toggle_nav = () => {
