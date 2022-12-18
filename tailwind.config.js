@@ -38,7 +38,7 @@ module.exports = {
         text8: ['15px', '18px'],
         text9: ['10px', '12.1px'],
         text10: ['16px', '19.36px'],
-        text11: ['19px', '23px'],
+        text11: ['19px', '22 px'],
       },
       boxShadow: {
         'shadowbtn': '0 4px 4px rgba(0, 0, 0, 0.7)',
