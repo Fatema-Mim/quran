@@ -27,6 +27,9 @@ module.exports = {
         color9: '#D9D9D9',
         color10: '#3D3C3C',
         color11: '#055353',
+        color12: '#001D1D',
+        color13: '#2DD22D',
+        
       },
       fontSize: {
         text1: ['18px', '22px'],
@@ -42,7 +45,8 @@ module.exports = {
         text11: ['19px', '22 px'],
         text12: ['40px', '34.75px'],
         text13: ['14px', '16.94px'],
-        text14: ['20px', '30px'],
+        text14: ['20px', '31px'],
+        text15: ['16px', '19px'],
       },
       boxShadow: {
         'shadowbtn': '0 4px 4px rgba(0, 0, 0, 0.7)',

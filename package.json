@@ -1,8 +1,9 @@
 {
   "scripts": {
-    "build_css": "npx tailwindcss -i ./src/assets/css/app.css -o ./public/assets/css/app.css"
+    "build_css": "npx tailwindcss -i ./src/assets/css/app.css -o ./public/assets/css/app.css --watch "
   },
   "devDependencies": {
+    
     "tailwindcss": "^3.2.4"
   }
 }

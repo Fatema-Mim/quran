@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/assets/css/app.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container flex flex-col h-screen mx-auto my-auto">
+        <!-- nav -->
+        <nav class="fixed w-full pr-6 bg-color2 shadow-shadowbg lg:hidden">
+           <div class="flex justify-between">
+                <img src="../public/img/logo/logo.png" alt="logo" class="inline-block">
+                <button onclick="toggle_nav()">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white"   class="self-center inline-block w-8 h-8 focus:bg-none">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+           </div>
+            <ul class="hidden pb-2 space-y-2 text-center duration-700" id="navbar">
+                <li class="py-2 rounded-md hover:bg-color12">
+                    <a href="/" class="text-white uppercase text-text10">hem</a>
+                </li>
+                <li class="flex justify-center py-2 rounded-md hover:bg-color12">
+                    <span class="flex space-x-1">
+                        <a href="/" class="text-white uppercase text-text10">Kureser</a>
+                        <img src="../../public/img/icon/Polygon 1.png" alt="icon" class="self-center inline-block object-fill h-3">
+                    </span>
+                </li>
+                <li class="py-2 rounded-md hover:bg-color12">
+                    <a href="/" class="text-white uppercase text-text10">artiklar</a>
+                </li>
+                <li class="py-2 rounded-md hover:bg-color12">
+                    <a href="/" class="text-white uppercase text-text10">orakunskap</a>
+                </li>
+                <li class="py-2 rounded-md hover:bg-color12">
+                    <a href="/" class="text-white uppercase text-text10">faq</a>
+                </li>
+                <li class="py-2 rounded-md hover:bg-color12">
+                    <a href="/" class="text-white uppercase text-text10">om oss</a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="fixed justify-between hidden w-full bg-color2 shadow-shadowbg lg:flex">
+            <img src="../../public/img/logo/logo.png" alt="logo" class="inline-block">
+            <div class="flex flex-col items-end justify-end pr-6">
+                <div class="flex flex-1 space-x-10 text-right">
+                    <ul class="flex space-x-3">
+                        <li>
+                            <a href="/">
+                                <img src="../../public/img/icon/facebook.png" alt="" class="inline-block object-fill">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/">
+                                <img src="../../public/img/icon/insta.png" alt="" class="inline-block object-fill">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/">
+                                <img src="../../public/img/icon/call.png" alt="" class="inline-block object-fill">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/">
+                                <img src="../../public/img/icon/mail.png" alt="" class="inline-block object-fill">
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="flex space-x-3">
+                        <li>
+                            <a href="/">
+                                <img src="../../public/img/icon/search.png" alt="" class="inline-block object-fill w-4">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/">
+                                <img src="../../public/img/icon/network.png" alt="" class="inline-block object-fill w-4">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/">
+                                <img src="../../public/img/icon/setting.png" alt="" class="inline-block object-fill w-4">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/">
+                                <img src="../../public/img/icon/user.png" alt="" class="inline-block object-fill w-4">
+                            </a>
+                        </li>
+                    </ul>
+                </div> 
+                 <div>
+                    <ul class="flex justify-between pb-2 pr-8 space-x-28 ">
+                        <li>
+                            <a href="/" class="text-white uppercase text-text10">hem</a>
+                        </li>
+                        <li>
+                            <span class="flex space-x-1">
+                                <a href="/" class="text-white uppercase text-text10">Kureser</a>
+                                <img src="../../public/img/icon/Polygon 1.png" alt="icon" class="self-center object-fill h-3">
+                            </span>
+                        </li>
+                        <li>
+                            <a href="/" class="text-white uppercase text-text10">artiklar</a>
+                        </li>
+                        <li>
+                            <a href="/" class="text-white uppercase text-text10">orakunskap</a>
+                        </li>
+                        <li>
+                            <a href="/" class="text-white uppercase text-text10">faq</a>
+                        </li>
+                        <li>
+                            <a href="/" class="text-white uppercase text-text10">om oss</a>
+                        </li>
+                    </ul>
+                 </div>
+                 
+            </div>
+        </nav>
+        <main class="flex flex-1 w-full pt-32 overflow-hidden ">
+            <div class="hidden h-screen p-4 w-72 bg-color2 shadow-shadowbg" id="sidebar">
+                <div class="flex justify-between">
+                    <div class="bg-color12 w-[230px] h-[48px] rounded-[35px] flex justify-between py-1">
+                        <button class="px-4 mx-auto hover:bg-color2 rounded-[35px] text-text10 text-white capitalize">surah</button>
+                        <button class="px-6 mx-auto hover:bg-color2 rounded-[35px] text-text10 text-white capitalize">Juz</button>
+                        <button class="px-4 mx-auto hover:bg-color2 rounded-[35px] text-text10 text-white capitalize">pages</button>
+                    </div>
+                    <button class="self-center" onclick="toggle_sidebar()">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 stroke-white">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex w-full pt-6 text-white text-text1 group">
+                    <div class="px-1 border-r">
+                        <p class="px-2 py-1 mb-6 rounded-md bg-color12 w-36">Sok surah</p>
+                        <div class="px-2 space-y-1.5 h-screen overflow-y-scroll scrollbar">
+                            <p class="group-hover:bg-color12 px-1 py-1.5 rounded-md cursor-pointer"><span>1</span> Al-Fatiha</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer"><span>1</span> Al-Fatiha</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer"><span>1</span> Al-Fatiha</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer"><span>1</span> Al-Fatiha</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer"><span>1</span> Al-Fatiha</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer"><span>1</span> Al-Fatiha</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer"><span>1</span> Al-Fatiha</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer"><span>1</span> Al-Fatiha</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer"><span>1</span> Al-Fatiha</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer"><span>1</span> Al-Fatiha</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer"><span>1</span> Al-Fatiha</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer"><span>1</span> Al-Fatiha</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer"><span>1</span> Al-Fatiha</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer"><span>1</span> Al-Fatiha</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer"><span>1</span> Al-Fatiha</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer"><span>1</span> Al-Fatiha</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer"><span>1</span> Al-Fatiha</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer"><span>1</span> Al-Fatiha</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer"><span>1</span> Al-Fatiha</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer"><span>1</span> Al-Fatiha</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer"><span>1</span> Al-Fatiha</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer"><span>1</span> Al-Fatiha</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer"><span>1</span> Al-Fatiha</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer"><span>1</span> Al-Fatiha</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer"><span>1</span> Al-Fatiha</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer"><span>1</span> Al-Fatiha</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer"><span>1</span> Al-Fatiha</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer"><span>1</span> Al-Fatiha</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer"><span>1</span> Al-Fatiha</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer"><span>1</span> Al-Fatiha</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer"><span>1</span> Al-Fatiha</p>
+                            
+                        </div>
+                    </div>
+                    <div class="px-1">
+                        <p class="w-24 px-2 py-1 mb-6 rounded-md text-text1 bg-color12">Vers</p>
+
+                        <div class="px-2 space-y-1.5 h-screen overflow-y-scroll scrollbar">
+                            <p class="group-hover:bg-color12 px-1 py-1.5 rounded-md cursor-pointer">1</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer">1</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer">1</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer">1</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer">1</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer">1</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer">1</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer">1</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer">1</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer">1</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer">1</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer">1</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer">1</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer">1</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer">1</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer">1</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer">1</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer">1</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer">1</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer">1</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer">1</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer">1</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer">1</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer">1</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer">1</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer">1</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer">1</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer">1</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer">1</p>
+                            <p class=" px-1 py-1.5 rounded-md cursor-pointer">1</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col flex-1 w-full h-screen overflow-y-scroll bg-color2 scrollbar">
+               <button class="inline-block" id="menu" onclick="toggle_sidebarOpen()">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 p-1 bg-white stroke-black">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+                    </svg>
+                </button>
+                <div class="flex-1 p-6 md:p-[20px] lg:p-[50px] space-y-4">
+                    <div class="justify-between space-y-3 sm:flex sm:space-y-0">
+                        <div class="text-center text-white sm:text-start">
+                            <p>Översatt av</p>
+                            <p> Namn</p>
+                        </div>
+                        <div class="self-center">
+                            <div class="bg-color12 text-white w-[334px] h-[49px] rounded-[35px] flex justify-between py-1">
+                                <button class="mx-auto px-9 hover:bg-color2  rounded-[35px]">oversattning</button>
+                                <button class="mx-auto px-9 hover:bg-color2  rounded-[35px]">oversattning</button>
+                            </div>
+                        </div>
+                        <div></div>
+                    </div>
+                    <div class="flex flex-col justify-between px-10 sm:flex-row">
+                        <div></div>
+                        <div>
+                            <p class="text-center text-white text-text12 font-notosans">سورة البقرة</p>
+                            <p class="text-center text-white text-text3 font-notosans">أَعُوْذُ بِاللّٰهِ مِنَ الشَّيْطٰانِ الرَّجِيْمِ‎</p>
+                        </div>
+                        <div class="self-end">
+                            <div>
+                                <img src="../../public/img/icon/Vector.png" alt="" class="inline-block object-fill">
+                                <p class="inline-block text-white capitalize text-text10">surah info</p>
+                            </div>
+                            <div>
+                                <img src="../../public/img/icon/Polygon 2.png" alt="" class="inline-block">
+                                <p class="inline-block text-white capitalize text-text10">Spela upp ljud</p>    
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="px-8">
+                            <div class="py-3 border-b-[1.5px] border-color12">
+                                <div class="space-y-2">
+                                    <div class="flex space-x-3 text-white font-elmessiri text-text14">
+                                        <p>2:1</p>
+                                        <p>Aliflammeem</p>
+                                    </div>
+                                    <button> <img src="../../public/img/icon/Polygon 3.png" alt=""></button>
+                                    <div class="flex justify-between">
+                                        <div class="flex flex-col space-y-2">
+                                            <button class="py-1"> <img src="../../public/img/icon/Vector (3).png" alt=""></button>
+                                            <button> <img src="../../public/img/icon/Vector (4).png" alt=""></button>
+                                        </div>
+                                        <div class="self-center">
+                                            <p class="text-right text-white text-text12 font-notosans">الم</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex space-x-3 text-color3 font-elmessiri text-text14">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 stroke-white">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                                        </svg>
+                                        <p>Alif-Lãm-Mĩm <span>.1</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-8">
+                            <div class="py-3 border-b-[1.5px] border-color12">
+                                <div class="space-y-2">
+                                    <div class="flex space-x-3 text-white font-elmessiri text-text14">
+                                        <p>2:1</p>
+                                        <p>Aliflammeem</p>
+                                    </div>
+                                    <button> <img src="../../public/img/icon/Polygon 3.png" alt=""></button>
+                                    <div class="flex justify-between">
+                                        <div class="flex flex-col space-y-2">
+                                            <button class="py-1"> <img src="../../public/img/icon/Vector (3).png" alt=""></button>
+                                            <button> <img src="../../public/img/icon/Vector (4).png" alt=""></button>
+                                        </div>
+                                        <div class="self-center">
+                                            <p class="text-right text-white text-text12 font-notosans">ذَ‌ٰلِكَ الْكِتَابُ لَا رَيْبَ ۛ فِيهِ ۛ هُدًى لِّلْمُتَّقِينَ</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex space-x-3 text-color3 font-elmessiri text-text14">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 stroke-white">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                                        </svg>
+                                        <p>Alif-Lãm-Mĩm <span>.1</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-8">
+                            <div class="py-3 border-b-[1.5px] border-color12">
+                                <div class="space-y-2">
+                                    <div class="flex space-x-3 text-white font-elmessiri text-text14">
+                                        <p>2:1</p>
+                                        <p>Aliflammeem</p>
+                                    </div>
+                                    <button> <img src="../../public/img/icon/Polygon 3.png" alt=""></button>
+                                    <div class="flex justify-between">
+                                        <div class="flex flex-col space-y-2">
+                                            <button class="py-1"> <img src="../../public/img/icon/Vector (3).png" alt=""></button>
+                                            <button> <img src="../../public/img/icon/Vector (4).png" alt=""></button>
+                                        </div>
+                                        <div class="self-center">
+                                            <p class="text-right text-white text-text12 font-notosans">ذَ‌ٰلِكَ الْكِتَابُ لَا رَيْبَ ۛ فِيهِ ۛ هُدًى لِّلْمُتَّقِينَ</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex space-x-3 text-color3 font-elmessiri text-text14">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 stroke-white">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                                        </svg>
+                                        <p>Alif-Lãm-Mĩm <span>.1</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+            var navbar = document.getElementById("navbar");
+            var sidebar = document.getElementById("sidebar");
+            var menu = document.getElementById("menu");
+
+            const toggle_nav = () => {
+                navbar.classList.toggle("hidden");
+            };
+        
+            // Close menu is window size increases
+            window.onresize = () => {
+                let viewportWidth = window.innerWidth;
+                if (viewportWidth > 1050) {
+                navbar.classList.add("hidden");
+                }
+            };
+
+            const toggle_sidebar = () =>{
+                sidebar.classList.toggle("hidden");
+                menu.classList.remove("hidden");
+            }
+            const toggle_sidebarOpen = () =>{
+                sidebar.classList.remove("hidden")
+                menu.classList.add("hidden")
+            }
+            
+     </script>
+</body>
+</html>

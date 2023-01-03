@@ -9,3 +9,19 @@
 html{
     scroll-behavior: smooth;
 }
+
+@layer utilities {
+    
+    .scrollbar::-webkit-scrollbar {
+       width: 4px;
+    }
+    .scrollbar::-webkit-scrollbar-thumb {
+        background: #001D1D;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        
+    }
+    .scrollbar::-webkit-scrollbar-thumb{
+      border-radius: 100vh;
+    }
+
+}
